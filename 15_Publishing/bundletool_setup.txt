@@ -1,0 +1,18 @@
+to install an android apk to your device:
+In android studio:
+build -> Generate Signed bundle/APK
+- next ->
+  create new keystore path or choose existing one
+  fill in passwords
+- choose release & finish
+
+download bundletool jar from: https://github.com/google/bundletool/releases
+place jar in projects android - app - release folder: e.g.:
+D:\TM\jaar3\PO3\PROFESSIONALISERINGSTRAJECT\IONIC\15_Publishing\CourseProjectPart10Publishing\android\app\release
+
+Open cmd in this release folder:
+fill in the variables in the command with your settings:
+java -jar bundletool-all-1.4.0.jar build-apks --bundle=app-release.aab --output=release.apks --ks=keystore.jks --ks-pass=pass:amberionic --ks-key-alias=key0 --key-pass=pass:amberionic
+
+look up your devices serial id and install the app:
+java -jar bundletool-all-1.4.0.jar install-apks --apks=release.apks --device-id=9YHNW18B28002040

@@ -1,0 +1,7 @@
+{
+  "name": "CourseProjectPart1Navigation",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
